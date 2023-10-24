@@ -1,0 +1,53 @@
+---
+title: 'Lab 7: Hypothesis Testing'
+output: pdf_document
+---
+
+**For this lab, it will be helpful to refer to the Lab 7 Guide document posted in the Lab 6 module**
+
+## Lab Goal
+
+The purpose of this lab is to explore hypothesis testing for an unknown population mean, $\mu$, when $\bar X_n \sim N(\mu,\sigma/\sqrt{n})$.  There are three main topics in the lab:
+
+(I) how to form a rejection region at a given significance level 
+(II) how to calculate a p-value
+(III) how to calculate the power of a test (or choose $n$ to get a desired power)
+
+# Problem 1.1: (The Setup) Hard Alcohol Content of Mixed Drinks in NYC
+
+The industry standard for the amount of alcohol poured into many types of drinks is 1.5 oz.  Regulators are interested in whether on average the amount of alcohol poured into drinks purchased in New York City is the industry standard.  Forty bartenders are chosen at random from bars and restaurants in NYC.  Each were asked to pour the amount of hard alcohol into a glass needed to make a mixed drink.  The amount of hard alcohol poured by each bartender was recorded.  The standard deviation of the amount of hard alcohol poured to make a drink in NYC is known to be about 0.39 oz.  The sample mean of the amount of hard alcohol poured for the mixed drink by the 40 bartenders was 1.7 oz.
+
+
+  a) Define $\mu$ and determine the null and alternative hypotheses of this study.
+   
+  b) What is the approximate distribution of the sample mean under the null hypothesis for this study?
+
+# Problem 1.2: (Rejection Region) Hard Alcohol Content of Mixed Drinks in NYC
+Suppose the regulators want to perform the hypothesis test determined above at a significance level of 0.01.
+  
+  c) What is the rejection region of this test?
+  
+  d) Based on the rejection region, should we reject $H_0$?
+  
+# Problem 1.3: (P-value) Hard Alcohol Content of Mixed Drinks in NYC
+
+  e) What is the p-value of this test?
+  
+  f) Based on the p-value, should we reject $H_0$?
+  
+# Problem 2
+
+In reference to problem 1, suppose that NYC officials don't mind if the population mean amount of hard alcohol in a mixed drink in NYC is a bit higher than 1.5 oz, but they do want to make sure that they can detect when it is in truth 1.65 oz (or higher).  That is, they want to make sure that when the population mean is in fact 1.65oz, their testing will have a high probability of revealing this fact.  Thus, to calculate the power of the test, we'll set $\mu_a$ = 1.65 oz. and $\bar X_{40} \sim N(1.65, 0.39/\sqrt{40})$.
+    
+  a) Approximate the power of the test performed in Problem 1 using the following steps:
+      
+     i) Simulate 100,000 independent samples from the distribution of $\bar X_{40}$ under the alternative hypothesis that $\mu_a = 1.65$, i.e. $\bar X_{40} \sim N(1.65, 0.39/\sqrt{40})$.
+        
+     ii) Based on these 100,000 samples, estimate the probability that the sample mean of the study will fall into the rejection region determined in Problem 1(b).  This is the power of the test when the sample size, n, is equal to 40.  
+        
+  b) Calculate the actual power of this test, $P(\bar X_n \leq 1.34 \text{ or } \bar X_n \geq 1.66~|~\mu=1.65)$ using the `pnorm()` function in R.
+
+  c)   Re-run the code from part (b) using different values of n.  By trial and error, find the smallest value of $n$ such that the power of the test is greater than or equal to 0.9.
+       
+
+ 
