@@ -12,4 +12,4 @@ xw547@cornell.edu
 
 Logistic Questions? Email Dave directly!
 
-https://docs.google.com/presentation/d/1E28HwlW3oLi_6AOhdc5mHKqnuZUIVaWR/edit?usp=sharing&ouid=112512314599026036621&rtpof=true&sd=true
+https://docs.google.com/presentation/d/1iq87jbBdmEC1NG3iLAMIUxPD9q6JxcIzvFyHuJh0UAc/edit?usp=sharing
